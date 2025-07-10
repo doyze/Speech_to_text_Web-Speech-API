@@ -90,6 +90,10 @@ function App() {
             <li>• ข้อความสีเทาคือการแปลงแบบเรียลไทม์ ข้อความสีขาวคือผลลัพธ์สุดท้าย</li>
           </ul>
         </div>
+        
+        <footer className="text-center mt-8 text-gray-500 text-sm">
+          Dev by doyze : 10/07/2025
+        </footer>
       </div>
     </div>
   );
