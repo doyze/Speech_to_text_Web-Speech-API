@@ -51,3 +51,26 @@ npm run dev
 -   `npm run build`: สร้าง (Build) โปรเจคสำหรับนำไปใช้งานจริง (Production)
 -   `npm run lint`: ตรวจสอบคุณภาพของโค้ดด้วย ESLint
 -   `npm run preview`: พรีวิวเวอร์ชันที่ Build แล้ว
+
+
+## batfile เพื่่อใช้งาน บันทึกในไฟล์ "stt.bat"
+
+```bash
+@echo off
+cd /d "C:\tmp\code\STT2_ok\Speech_to_text"
+
+:: ตรวจสอบว่ามี Chrome ติดตั้งอยู่หรือไม่ ถ้าไม่มี ให้ใช้ Edge หรือระบุพาธของ Chrome เอง
+IF EXIST "C:\Program Files\Google\Chrome\Application\chrome.exe" (
+    start "" "C:\Program Files\Google\Chrome\Application\chrome.exe" "http://localhost:5173"
+) ELSE IF EXIST "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" (
+    start "" "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" "http://localhost:5173"
+) ELSE (
+    :: ถ้าไม่เจอ Chrome ในตำแหน่งมาตรฐาน ให้ลองเปิดด้วยเบราว์เซอร์เริ่มต้นของระบบ
+    start "" "http://localhost:5173"
+    echo Chrome not found in standard paths. Opening with default browser.
+)
+
+npm run dev
+pause
+
+```
