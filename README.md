@@ -53,7 +53,7 @@ npm run dev
 -   `npm run preview`: พรีวิวเวอร์ชันที่ Build แล้ว
 
 
-## batfile เพื่่อใช้งาน บันทึกในไฟล์ "stt.bat"
+## batfile เพื่อใช้งาน บันทึกในไฟล์ "stt.bat"
 
 ```bash
 @echo off
